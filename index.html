@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EdKnots Creations</title>
+  <meta name="description" content="EdKnots Creations - Handmade Yarn Mats and Wall Art in Kenya. Home of quality décor, custom-made with love.">
+<meta property="og:title" content="EdKnots Creations">
+<meta property="og:description" content="House of Githinji – Handmade Yarn Mats & Wall Hangings. Order via WhatsApp.">
+<meta property="og:image" content="edknots-logo. png">
+
   <style>
     body {
       margin: 0;
@@ -126,11 +131,75 @@ button.button {
 button.button:hover {
   background-color: #c06c84;
 }
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.filter-buttons button {
+  background-color: #c06c84;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.filter-buttons button:hover {
+  background-color: #f67280;
+}
+body {
+  cursor: url("edknots-cursor.png.jpg") 16 16, auto;
+}
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #c06c84;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+  z-index: 9999;
+}
+
+.mobile-float-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .mobile-float-button {
+    display: block;
+  }
+   .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product {
+        width: 90%;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+    }
+
 
   </style>
 </head>
 <body>
   <header>
+      <img src="edknots-logo. png.png" alt="EdKnots Creations Logo" width="150">
     <h1>EdKnots Creations</h1>
     <p>"House of Githinji"</p>
     <a href="#products" class="button">View Our Work</a>
@@ -142,21 +211,25 @@ button.button:hover {
   </section>
 
   <section class="section" id="products">
-    <h2>Our Products</h2>
+   <div class="filter-buttons">
+  <button onclick="filterSelection('all')">Show All</button>
+  <button onclick="filterSelection('mat')">Mats</button>
+  <button onclick="filterSelection('wall')">Wall Art</button>
+</div>
     <div class="products">
-      <div class="product">
+      <div class="product mat">
         <img src="image 1.jpg.webp" alt="Yarn Mat">
         <p>Yin Yang Inspired Mat</p>
       </div>
-      <div class="product">
+      <div class="product wall">
         <img src="image 2.jpg.jpeg" alt="Yarn Mat">
         <p>Elegant Burgundy Mat</p>
       </div>
-      <div class="product">
+      <div class="product mat">
         <img src="image 3.jpg.jpeg" alt="Yang Mat">
         <p>Brown & White Cowhide Design</p>
       </div>
-      <div class="product">
+      <div class="product mat">
         <img src="image 4.jpg.jpeg" alt="Yang Mat">
         <p>Inspired Mat made out of sack</p>
       </div>
@@ -166,7 +239,7 @@ button.button:hover {
   <h2>Place an Order</h2>
  <form action="https://formsubmit.co/edwingithara44@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+  <input type="hidden" name="_next" value="index.html">
     <div class="form-group">
       <input type="text" name="name" placeholder="Your Full Name" required />
     </div>
@@ -209,9 +282,30 @@ button.button:hover {
     <p>📱 <a href="https://wa.me/254725173636" target="_blank">Chat with us on WhatsApp</a></p>
     <p>📸 <a href="https://instagram.com/edknotscreations" target="_blank">Follow us on Instagram</a></p>
   </section>
-
+     
   <footer>
     <p>&copy; 2025 EdKnots Creations. Made with ❤️ in Kenya.</p>
   </footer>
+  <a href="https://wa.me/254725173636" class="mobile-float-button">Order on WhatsApp</a>
+  <script>
+function filterSelection(category) {
+  let items = document.getElementsByClassName("product");
+  if (category == "all") category = "";
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = items[i].className.indexOf(category) > -1 ? "block" : "none";
+  }
+}
+window.onload = () => filterSelection("all");
+</script>
+<div class="custom-cursor" id="cursor"></div>
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+
 </body>
 </html>
