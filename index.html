@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>EdKnots Creations</title>
   <meta name="description" content="EdKnots Creations - Handmade Yarn Mats and Wall Art in Kenya. Home of quality décor, custom-made with love.">
 <meta property="og:title" content="EdKnots Creations">
@@ -163,7 +164,11 @@ button.button:hover {
   background-color: #f67280;
 }
 body {
-  cursor: url("edknots-cursor.png.jpg") 16 16, auto;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+  cursor: url("") 16 16, auto;
 }
 .custom-cursor {
   position: fixed;
@@ -265,23 +270,98 @@ body {
 
 /* Adjust on mobile */
 @media (max-width: 768px) {
-  .logo-title {
-    flex-direction: column;
+  /* Logo and Header Tweaks */
+  .logo {
+    width: 90px;
+    margin-bottom: 10px;
   }
 
-  .logo {
-    width: 100px;
+  header {
+    padding: 40px 10px;
   }
 
   header h1 {
-    font-size: 1.8em;
-
+    font-size: 1.6em;
+    margin: 0;
   }
- 
+
   header p {
     font-size: 1em;
+    margin: 5px 0;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: 20px 10px;
+  }
+
+  /* Testimonials and Contact */
+  .testimonial {
+    margin: 15px auto;
+    font-size: 0.95em;
+  }
+
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact p {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+
+  /* Order Form and Newsletter */
+  .order-form,
+  #newsletter {
+    padding: 20px 10px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  input, select, textarea {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  button.button,
+  .newsletter-form button {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  /* FAQ */
+  .faq-question {
+    padding: 12px 16px;
+    font-size: 1em;
+  }
+
+  .faq-answer {
+    padding: 0 16px;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 12px 16px;
   }
 }
+
+
+  .product p {
+    font-size: 0.95em;
+  }
+
+  .button,
+  .filter-buttons button,
+  .newsletter-form button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  input, textarea, select {
+    font-size: 1em;
+  }
+
 .how-made {
   display: flex;
   flex-wrap: wrap;
@@ -368,6 +448,111 @@ body {
   padding: 15px 20px;
 }
 
+#newsletter {
+  background-color: #fff0f5;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#newsletter h2 {
+  color: #c06c84;
+  margin-bottom: 10px;
+}
+
+#newsletter p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 16px;
+  font-size: 1em;
+  border: 2px solid #f8c3d0;
+  border-radius: 25px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.newsletter-form button {
+  background-color: #f67280;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #c06c84;
+}
+@media (max-width: 500px) {
+  .order-form,
+  .newsletter-form {
+    padding: 20px 10px;
+  }
+
+  input, textarea, select {
+    font-size: 1em;
+  }
+}
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #f67280;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #c06c84;
+}
+#trust {
+  background-color: #fff0f5;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.trust-box {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px dashed #f8c3d0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.trust-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+#trust p {
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.6;
+}
+
 
 
   </style>
@@ -375,7 +560,7 @@ body {
 <body>
 <header>
   <div class="logo-title">
-    <img src="edknots-logo. png.png" alt="EdKnots Creations Logo" class="logo">
+    <img src="edknots-logo. jpg.png" alt="EdKnots Creations Logo" class="logo">
     <div>
       <h1 class="animated-text">EdKnots Creations</h1>
       <p>"House of Githinji"</p>
@@ -391,9 +576,9 @@ body {
   <section class="section" id="process">
   <h2>How It's Made</h2>
   <div class="how-made">
-    <img src="process.jpg" alt="Yarn Mat Making Process">
+    <img src="how to make.jpg.jpeg" alt="Yarn Mat Making Process">
     <p>
-      Each EdKnots piece is made with heart and hands. We begin by choosing high-quality yarn, then carefully knot and weave it into beautiful, durable designs. Every mat, wall hanging, or custom order is handcrafted over hours — with love, precision, and passion.
+      Each EdKnots piece is made with heart and hands. We begin by drawing the design then choosing high-quality yarn, a crotchet and i mostly use hessian bag/burlap (gunia), then carefully knot and weave it into beautiful, durable designs. Every mat, wall hanging, or custom order is handcrafted over hours — with love, precision, and passion.
     </p>
   </div>
 </section>
@@ -479,7 +664,16 @@ body {
     <p>📱 <a href="https://wa.me/254725173636" target="_blank">Chat with us on WhatsApp</a></p>
     <p>📸 <a href="https://instagram.com/edknotscreations" target="_blank">Follow us on Instagram</a></p>
   </section>
-     
+     <section class="section" id="trust">
+  <h2>🔐 Shop with Confidence</h2>
+  <div class="trust-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Secure" class="trust-icon">
+    <p>
+      Your privacy and data are safe with EdKnots Creations. <br>
+      We use secure encrypted forms and trusted payment options.
+    </p>
+  </div>
+</section>
   <footer>
   <section class="section" id="faq">
   <h2>Frequently Asked Questions</h2>
@@ -506,11 +700,33 @@ body {
     </div>
 
   </div>
+  <section class="section" id="trust">
+  <h2>🔐 Shop with Confidence</h2>
+  <div class="trust-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Secure" class="trust-icon">
+    <p>
+      Your privacy and data are safe with EdKnots Creations. <br>
+      We use secure encrypted forms and trusted payment options.
+    </p>
+  </div>
 </section>
 
+ <section class="section" id="newsletter">
+  <h2>Join Our Yarn Family 🎉</h2>
+  <p>Get early access to new designs, discounts, and updates. No spam — only creativity!</p>
 
+  <form id="newsletter-form" class="newsletter-form">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <div id="thank-you-message" style="display: none; margin-top: 20px; color: #c06c84; font-weight: bold;">
+    🎉 Thank you for subscribing! You'll hear from us soon.
+  </div>
+</section>
     <p>&copy; 2025 EdKnots Creations. Made with ❤️ in Kenya.</p>
   </footer>
+  
   <a href="https://wa.me/254725173636" class="mobile-float-button">Order on WhatsApp</a>
   <script>
 function filterSelection(category) {
@@ -539,7 +755,82 @@ window.onload = () => filterSelection("all");
     });
   });
 </script>
+<script>
+  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page reload
 
+    const email = this.email.value;
+
+    fetch("https://formsubmit.co/ajax/edwingithara44@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("newsletter-form").reset();
+      document.getElementById("thank-you-message").style.display = "block";
+    })
+    .catch(error => {
+      alert("Oops! Something went wrong. Please try again.");
+      console.error(error);
+    });
+  });
+</script>
+<!-- Confetti script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page reload
+
+    const email = this.email.value;
+
+    fetch("https://formsubmit.co/ajax/edwingithara44@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.reset();
+      document.getElementById("thank-you-message").style.display = "block";
+
+      // 🎈 Trigger confetti
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+    })
+    .catch(error => {
+      alert("Oops! Something went wrong. Please try again.");
+      console.error(error);
+    });
+  });
+</script>
+<button id="scrollTopBtn" title="Go to top">⬆️</button>
+<script>
+  // Show the button when user scrolls down
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when clicked
+  document.getElementById("scrollTopBtn").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
